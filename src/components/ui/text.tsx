@@ -5,19 +5,31 @@ import { I18nManager, StyleSheet, Text as NNText } from "react-native";
 import { twMerge } from "tailwind-merge";
 import { tv } from "tailwind-variants";
 
+export type TextSize =
+  | "xs"
+  | "sm"
+  | "base"
+  | "lg"
+  | "xl"
+  | "2xl"
+  | "3xl"
+  | "4xl"
+  | "5xl";
+export type TextWeight =
+  | "thin"
+  | "light"
+  | "regular"
+  | "medium"
+  | "semibold"
+  | "bold"
+  | "extrabold"
+  | "black";
+
 interface Props extends TextProps {
   className?: string;
   tx?: TxKeyPath;
-  weight?:
-    | "thin"
-    | "light"
-    | "regular"
-    | "medium"
-    | "semibold"
-    | "bold"
-    | "extrabold"
-    | "black";
-  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl";
+  weight?: TextWeight;
+  size?: TextSize;
 }
 
 const textVariants = tv({

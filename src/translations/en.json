@@ -1,6 +1,7 @@
 {
   "onboarding": {
     "message": "Welcome",
-    "change": "Change"
+    "change": "Change",
+    "phone": "Phone"
   }
 }

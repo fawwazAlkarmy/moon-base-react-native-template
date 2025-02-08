@@ -6,6 +6,7 @@ export * from "./text";
 export * from "./button";
 export * from "./input";
 export * from "./checkbox";
+export * from "./PhoneInput";
 export { default as colors } from "./colors";
 export * from "./icons";
 
