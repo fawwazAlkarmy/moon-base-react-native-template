@@ -1,4 +1,4 @@
-import { translate, TxKeyPath } from "@/i18n";
+import { getLanguage, translate, TxKeyPath } from "@/i18n";
 import React from "react";
 import type { TextProps, TextStyle } from "react-native";
 import { I18nManager, StyleSheet, Text as NNText } from "react-native";
@@ -51,6 +51,17 @@ const textVariants = tv({
   },
 });
 
+const arabicFontMap = {
+  thin: "font-cairo-light",
+  light: "font-cairo-light",
+  regular: "font-cairo-regular",
+  medium: "font-cairo-medium",
+  semibold: "font-cairo-semibold",
+  bold: "font-cairo-bold",
+  extrabold: "font-cairo-extrabold",
+  black: "font-cairo-black",
+};
+
 export const Text = ({
   className = "",
   style,
@@ -60,9 +71,17 @@ export const Text = ({
   size = "base",
   ...props
 }: Props) => {
+  const locale = getLanguage();
+  const isArabic = locale === "ar";
+
   const textStyle = React.useMemo(
-    () => twMerge(textVariants({ weight, size }), className),
-    [className, weight, size]
+    () =>
+      twMerge(
+        textVariants({ size, weight }),
+        isArabic ? arabicFontMap[weight] : "",
+        className
+      ),
+    [className, weight, size, isArabic]
   );
 
   const nStyle = React.useMemo(

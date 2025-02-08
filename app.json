@@ -38,7 +38,13 @@
             "./assets/fonts/Montserrat-Regular.ttf",
             "./assets/fonts/Montserrat-Black.ttf",
             "./assets/fonts/Montserrat-ExtraBold.ttf",
-            "./assets/fonts/Montserrat-Thin.ttf"
+            "./assets/fonts/Montserrat-Thin.ttf",
+            "./assets/fonts/Cairo-Black.ttf",
+            "./assets/fonts/Cairo-Bold.ttf",
+            "./assets/fonts/Cairo-Regular.ttf",
+            "./assets/fonts/Cairo-SemiBold.ttf",
+            "./assets/fonts/Cairo-Medium.ttf",
+            "./assets/fonts/Cairo-Light.ttf"
           ]
         }
       ],
